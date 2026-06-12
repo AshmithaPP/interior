@@ -1,0 +1,224 @@
+/* StayInTheKnow.css */
+
+/* --- SECTION --- */
+.know-section {
+  background-color: #FAFAFA;
+  padding: 4.5rem 1.5rem 3.5rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .know-section {
+    padding: 5.5rem 2.5rem 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .know-section {
+    padding: 6rem 5rem 4.5rem;
+  }
+}
+
+.know-container {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+/* --- HEADER --- */
+.know-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .know-header {
+    margin-bottom: 3rem;
+  }
+}
+
+.know-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #A07850;
+  margin-bottom: 0.6rem;
+}
+
+.know-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  line-height: 1.2;
+}
+
+.know-heading em {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #A07850;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+@media (min-width: 768px) {
+  .know-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .know-heading {
+    font-size: 2.75rem;
+  }
+}
+
+/* --- CARDS GRID --- */
+.know-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .know-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .know-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+/* --- INDIVIDUAL CARD --- */
+.know-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Image wrapper */
+.know-card-img-wrap {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  aspect-ratio: 16 / 10;
+}
+
+.know-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.know-card:hover .know-card-img {
+  transform: scale(1.04);
+}
+
+/* Category tag */
+.know-card-category {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.know-card-category.cat-kitchen {
+  color: #C4722C;
+}
+
+.know-card-category.cat-wardrobe {
+  color: #2E7D6E;
+}
+
+.know-card-category.cat-interior {
+  color: #C44B2C;
+}
+
+/* Title */
+.know-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+  transition: color 0.25s ease;
+}
+
+.know-card:hover .know-card-title {
+  color: #A07850;
+}
+
+@media (min-width: 768px) {
+  .know-card-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* Meta row */
+.know-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  color: #999999;
+}
+
+.know-card-meta svg {
+  width: 14px;
+  height: 14px;
+  color: #A07850;
+  flex-shrink: 0;
+}
+
+.meta-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #CCCCCC;
+  flex-shrink: 0;
+}
+
+/* --- VIEW ALL LINK --- */
+.know-viewall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 2.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.know-viewall:hover {
+  color: #A07850;
+}
+
+.know-viewall svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s ease;
+}
+
+.know-viewall:hover svg {
+  transform: translateX(3px);
+}
