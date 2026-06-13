@@ -79,7 +79,7 @@ export default function BetterHome() {
               style={{ width: `${sliderPos}%` }}
             >
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                src={new URL("../assets/compare-1.jpg", import.meta.url).toString()}
                 alt="Before renovation — plain room with bare walls"
                 draggable="false"
                 style={{
