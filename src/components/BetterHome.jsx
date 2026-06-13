@@ -67,7 +67,7 @@ export default function BetterHome() {
             {/* AFTER image (full width, sits behind) */}
             <div className="comparison-after">
               <img
-                src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80"
+                src={new URL("../assets/compare-2.webp", import.meta.url).toString()}
                 alt="After renovation — modern bedroom with cane wardrobe and warm lighting"
                 draggable="false"
               />
