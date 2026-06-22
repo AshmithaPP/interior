@@ -12,7 +12,7 @@
 
 /* --- BLOG SECTION - Premium Refined Typography with #faf8f5 Background --- */
 .blog-section {
-  background-color: #faf8f5;
+  background-color: var(--primary-color);
   padding: 5rem 1.5rem;
   position: relative;
 }
@@ -43,7 +43,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   font-weight: 600;
-  color: #1C1C1A;
+  color: var(--text-title);
   letter-spacing: -0.02em;
   font-feature-settings: "ss02";
 }
@@ -57,7 +57,7 @@
 /* Navigation Links - Clean Sans */
 .blog-nav {
   margin-bottom: 2.5rem;
-  border-bottom: 1px solid #E8E0D5;
+  border-bottom: 1px solid var(--border-light);
   padding-bottom: 1rem;
 }
 
@@ -73,7 +73,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #8B7A66;
+  color: var(--text-body);
   cursor: pointer;
   padding: 0.25rem 0;
   transition: color 0.3s ease;
@@ -81,14 +81,14 @@
 }
 
 .nav-link:hover {
-  color: #1C1C1A;
+  color: var(--text-title);
 }
 
 /* Newsletter Section - "Stay in the know" */
 .newsletter-wrapper {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #E8E0D5;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .newsletter-content {
@@ -109,7 +109,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.7rem;
   font-weight: 500;
-  color: #1C1C1A;
+  color: var(--text-title);
   letter-spacing: -0.01em;
   font-feature-settings: "ss02";
 }
@@ -130,23 +130,23 @@
 .newsletter-input {
   background: transparent;
   border: none;
-  border-bottom: 1.5px solid #D4C9BC;
+  border-bottom: 1.5px solid var(--secondary-color);
   padding: 0.6rem 0.25rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
-  color: #1C1C1A;
+  color: var(--text-title);
   width: 240px;
   transition: border-color 0.3s ease;
 }
 
 .newsletter-input:focus {
   outline: none;
-  border-bottom-color: #A0886A;
+  border-bottom-color: var(--fourth-color);
 }
 
 .newsletter-input::placeholder {
-  color: #B8AE9F;
+  color: var(--text-muted);
   font-weight: 400;
   font-size: 0.85rem;
 }
@@ -156,9 +156,9 @@
   border: none;
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
-  color: #A0886A;
+  color: var(--secondary-color);
   cursor: pointer;
   padding: 0.6rem 0;
   transition: color 0.3s ease;
@@ -166,7 +166,7 @@
 }
 
 .subscribe-btn:hover {
-  color: #2C2418;
+  color: var(--fourth-color);
 }
 
 /* Categories Row */
@@ -180,7 +180,7 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  border-bottom: 1px solid #E8E0D5;
+  border-bottom: 1px solid var(--border-light);
   padding-bottom: 1rem;
 }
 
@@ -197,7 +197,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #8B7A66;
+  color: var(--text-body);
   cursor: pointer;
   padding: 0.6rem 0;
   transition: color 0.3s ease;
@@ -206,7 +206,7 @@
 }
 
 .category-btn:hover {
-  color: #1C1C1A;
+  color: var(--text-title);
 }
 
 /* Blog Posts Grid - 3 columns refined */
@@ -231,16 +231,23 @@
   }
 }
 
-/* Blog Post Card - Improved spacing & typography */
+/* Blog Post Card - Styled as Dark green box */
 .blog-post-card {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+  background-color: var(--fourth-color);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .blog-post-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(217, 203, 164, 0.2);
 }
 
 .post-category {
@@ -248,7 +255,7 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #A0886A;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -259,7 +266,7 @@
   overflow: hidden;
   margin-bottom: 1.25rem;
   aspect-ratio: 4 / 3;
-  background-color: #F0EBE4;
+  background-color: var(--secondary-color);
 }
 
 .post-image {
@@ -277,7 +284,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.35rem;
   font-weight: 600;
-  color: #1C1C1A;
+  color: var(--text-on-dark-title);
   line-height: 1.3;
   margin-bottom: 0.85rem;
   letter-spacing: -0.01em;
@@ -297,13 +304,13 @@
   font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
-  color: #B8AE9F;
+  color: var(--text-on-dark-muted);
   letter-spacing: -0.01em;
 }
 
 .post-author {
   font-weight: 500;
-  color: #9A8A78;
+  color: var(--primary-color);
 }
 
 .post-date {
@@ -313,7 +320,7 @@
 .post-meta span:not(:last-child)::after {
   content: "•";
   margin-left: 0.6rem;
-  color: #D4C9BC;
+  color: var(--primary-color);
 }
 
 /* View All Posts Button - Refined */
@@ -328,13 +335,13 @@
   align-items: center;
   gap: 0.7rem;
   background: transparent;
-  border: 1.5px solid #D4C9BC;
+  border: 1.5px solid var(--secondary-color);
   padding: 0.8rem 2rem;
   border-radius: 3rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: #6B5E4F;
+  font-weight: 600;
+  color: var(--secondary-color);
   cursor: pointer;
   transition: all 0.35s ease;
   letter-spacing: -0.01em;
@@ -342,16 +349,18 @@
 
 .view-all-btn svg {
   transition: transform 0.35s cubic-bezier(0.2, 0, 0, 1);
+  color: var(--secondary-color);
 }
 
 .view-all-btn:hover {
-  background: #C4A882;
-  border-color: #C4A882;
-  color: #FFFFFF;
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .view-all-btn:hover svg {
   transform: translateX(5px);
+  color: var(--primary-color);
 }
 
 /* Responsive Adjustments - Optimized for all devices */
@@ -404,7 +413,7 @@
 .category-btn:focus-visible,
 .nav-link:focus-visible,
 .newsletter-input:focus {
-  outline: 2px solid #C4A882;
+  outline: 2px solid var(--secondary-color);
   outline-offset: 3px;
   border-radius: 2px;
 }

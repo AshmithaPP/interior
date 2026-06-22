@@ -2,12 +2,12 @@
 
 /* ---------- DESIGN TOKENS ---------- */
 :root {
-  --color-dark: #1E1B1A;
-  --color-brown: #B8865B;
-  --color-warm-light: #F7F3EE;
+  --color-dark: #081710;          /* Footer dark green (footer color) */
+  --color-brown: #d9cba4;         /* Footer accent gold (primary color) */
+  --color-warm-light: #15301f;    /* Footer medium dark green (fourth color) */
   --color-white: #FFFFFF;
-  --color-muted-text: rgba(30, 27, 26, 0.75);
-  --color-light-border: rgba(30, 27, 26, 0.1);
+  --color-muted-text: rgba(255, 255, 255, 0.75);
+  --color-light-border: rgba(217, 203, 164, 0.15);
   --font-main: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --transition-default: all 0.2s ease;
 }
@@ -18,7 +18,7 @@
   width: 100%;
   min-height: 520px;  /* reduced height */
   font-family: var(--font-main);
-  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* ---------- LEFT PANEL (WARM, LIGHT) ---------- */
@@ -30,13 +30,14 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 60px;
+  border-top: 1px solid var(--color-light-border);
 }
 
 .footer__logo {
   font-size: 58px;
   font-weight: 800;
   letter-spacing: -1.5px;
-  color: var(--color-dark);
+  color: var(--color-brown);
   line-height: 1;
   text-transform: uppercase;
   transition: var(--transition-default);
@@ -44,7 +45,7 @@
 
 .footer__logo:hover {
   letter-spacing: -0.5px;
-  color: var(--color-brown);
+  color: var(--color-white);
 }
 
 /* info columns container */
@@ -64,11 +65,11 @@
 .footer__col-title {
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-dark);
+  color: var(--color-brown);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin: 0 0 4px 0;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .footer__col-text {
@@ -81,7 +82,7 @@
 }
 
 .footer__col-text:hover {
-  color: var(--color-dark);
+  color: var(--color-white);
   transform: translateX(2px);
 }
 
@@ -99,37 +100,39 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: rgba(30, 27, 26, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   transition: var(--transition-default);
-  color: var(--color-dark);
+  color: var(--color-brown);
   text-decoration: none;
 }
 
 .footer__social-link:hover {
   background: var(--color-brown);
+  color: var(--color-dark);
   transform: translateY(-3px);
 }
 
 .footer__social-link:hover .footer__icon {
-  color: white;
+  color: var(--color-dark);
 }
 
 .footer__icon {
   transition: var(--transition-default);
-  color: var(--color-dark);
+  color: var(--color-brown);
 }
 
 /* bottom note */
 .footer__bottom-note {
   margin-top: 20px;
   padding-top: 24px;
-  border-top: 1px solid rgba(30, 27, 26, 0.12);
+  border-top: 1px solid var(--color-light-border);
 }
 
 .footer__bottom-note p {
   font-size: 12px;
   color: var(--color-muted-text);
+  opacity: 0.8;
   letter-spacing: 0.3px;
 }
 
@@ -142,7 +145,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 48px;
-  border-radius: 32px 0 0 0;
+  border-top: 1px solid var(--color-light-border);
+  border-left: 1px solid var(--color-light-border);
 }
 
 .footer__right-top {
@@ -163,7 +167,7 @@
 .footer__description {
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-muted-text);
   margin: 0;
 }
 
@@ -177,7 +181,7 @@
 .footer__input-row {
   display: flex;
   align-items: center;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 1.5px solid rgba(217, 203, 164, 0.35);
   padding-bottom: 14px;
   transition: border-color 0.2s;
 }
@@ -219,6 +223,10 @@
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.footer__arrow svg {
+  color: var(--color-brown);
+}
+
 .footer__arrow:hover {
   opacity: 1;
   transform: translateX(5px);
@@ -244,7 +252,7 @@
 .footer__checkbox-text {
   font-size: 12px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-muted-text);
   font-family: var(--font-main);
   font-weight: 400;
 }
@@ -252,7 +260,7 @@
 .footer__checkbox-link {
   text-decoration: underline;
   text-underline-offset: 3px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-brown);
   cursor: pointer;
   font-weight: 500;
   transition: color 0.2s;
@@ -269,7 +277,7 @@
   flex-wrap: wrap;
   margin-top: 8px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--color-light-border);
 }
 
 .footer__contact-item {
@@ -277,7 +285,7 @@
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-muted-text);
   letter-spacing: 0.3px;
 }
 

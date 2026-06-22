@@ -2,7 +2,7 @@
 
 /* --- SECTION --- */
 .betterhome-section {
-  background-color: #FFFFFF;
+  background-color: var(--primary-color);
   padding: 5rem 1.5rem 4rem;
   position: relative;
 }
@@ -32,7 +32,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #1A1A1A;
+  color: var(--text-title);
   text-align: center;
   margin-bottom: 0.6rem;
   letter-spacing: -0.02em;
@@ -54,7 +54,7 @@
 .betterhome-subtitle {
   font-family: 'Outfit', sans-serif;
   font-size: 0.9rem;
-  color: #777777;
+  color: var(--text-body);
   text-align: center;
   margin-bottom: 2.5rem;
   font-weight: 400;
@@ -75,7 +75,7 @@
   max-width: 68rem;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.25);
   cursor: ew-resize;
   user-select: none;
   -webkit-user-select: none;
@@ -130,7 +130,7 @@
   background-color: #FFFFFF;
   z-index: 3;
   pointer-events: none;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Draggable handle */
@@ -141,22 +141,23 @@
   z-index: 4;
   width: 44px;
   height: 44px;
-  background: #FFFFFF;
+  background: var(--secondary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
   cursor: ew-resize;
   transition: box-shadow 0.2s ease;
+  border: 2px solid var(--primary-color);
 }
 
 .comparison-handle:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .comparison-handle svg {
-  color: #555555;
+  color: var(--primary-color);
   pointer-events: none;
 }
 
@@ -176,56 +177,56 @@
   align-items: center;
   gap: 0.5rem;
   background: transparent;
-  border: 1.5px solid #D1D1D1;
+  border: 1.5px solid var(--secondary-color);
   padding: 0.75rem 1.5rem;
   border-radius: 0.6rem;
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #2C2C2C;
+  color: var(--secondary-color);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .cta-talk:hover {
-  border-color: #A07850;
-  color: #A07850;
-  background-color: rgba(160, 120, 80, 0.04);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .cta-talk svg {
   width: 16px;
   height: 16px;
-  color: #888888;
+  color: var(--secondary-color);
   transition: color 0.25s ease;
 }
 
 .cta-talk:hover svg {
-  color: #A07850;
+  color: var(--primary-color);
 }
 
-/* Solid orange/coral button */
+/* Solid button */
 .cta-quote {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #A07850;
+  background-color: var(--secondary-color);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 0.6rem;
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--primary-color);
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 2px 8px rgba(160, 120, 80, 0.25);
+  box-shadow: 0 2px 8px rgba(15, 32, 24, 0.25);
 }
 
 .cta-quote:hover {
-  background-color: #8b6743;
+  background-color: var(--fourth-color);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(160, 120, 80, 0.35);
+  box-shadow: 0 4px 14px rgba(15, 32, 24, 0.35);
 }
 
 .cta-quote .arrow-circle {
@@ -234,14 +235,14 @@
   justify-content: center;
   width: 22px;
   height: 22px;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(217, 203, 164, 0.2);
   border-radius: 50%;
 }
 
 .cta-quote .arrow-circle svg {
   width: 12px;
   height: 12px;
-  color: #FFFFFF;
+  color: var(--primary-color);
 }
 
 /* "takes 2 minutes" note */
@@ -251,14 +252,14 @@
   gap: 0.4rem;
   font-family: 'Lora', serif;
   font-size: 0.8rem;
-  color: #999999;
+  color: var(--text-muted);
   font-style: italic;
 }
 
 .betterhome-note svg {
   width: 14px;
   height: 14px;
-  color: #BBBBBB;
+  color: var(--text-muted);
 }
 
 /* --- WHATSAPP FLOATING BUTTON --- */
